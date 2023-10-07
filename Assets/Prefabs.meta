@@ -1,6 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8ba14207ac6be014690d4a6dbb485826
 folderAsset: yes
+=======
+<<<<<<<< HEAD:Assets/StarterAssets/ThirdPersonController/Scenes/Playground.unity.meta
+guid: e9017d5f96b9f09489b4b37e1d6eb914
+========
+guid: f92294648c38fb94d9a8e28d0c32f46e
+folderAsset: yes
+>>>>>>>> main:Assets/Prefabs.meta
+>>>>>>> main
 DefaultImporter:
   externalObjects: {}
   userData: 
