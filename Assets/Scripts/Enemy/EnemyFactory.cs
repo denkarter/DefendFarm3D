@@ -6,8 +6,9 @@ namespace Enemy
     [CreateAssetMenu(fileName = "EnemyFactory", menuName = "Factory/EnemyFactory")]
     public class EnemyFactory: ScriptableObject
     {
-        [SerializeField] private EnemyConfig _zombie;
-        [SerializeField] private EnemyConfig _ork;
+        [SerializeField] private EnemyConfig _goblin;
+        [SerializeField] private EnemyConfig _golem;
+        [SerializeField] private EnemyConfig _skeleton;
 
         public Enemy Get(EnemyType enemyType)
         {
@@ -21,10 +22,12 @@ namespace Enemy
         {
             switch (enemyType)
             {
-                case EnemyType.Ork:
-                    return _ork;
-                case EnemyType.Zombie:
-                    return _zombie;
+                case EnemyType.Goblin:
+                    return _goblin;
+                case EnemyType.Golem:
+                    return _golem;
+                case EnemyType.Skeleton:
+                    return _skeleton;
                 default:
                     throw new ArgumentException(nameof(enemyType));
             }
