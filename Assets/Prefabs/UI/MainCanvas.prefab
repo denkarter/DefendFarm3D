@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -825,7 +825,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &5633238201978366076
 MonoBehaviour:
@@ -1285,18 +1285,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1465012148195525511, guid: 15c0c78b679c81045b96117dbc944bf4, type: 3}
   m_PrefabInstance: {fileID: 1939294416491326753}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4266080065469794436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1062010818042703526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c277d274d8d40e5a6b2a0e9bc19f2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7030290191237999219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1351,11 +1339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5439096403603197393, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 56
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5439096403603197393, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 54
+      value: 108
       objectReference: {fileID: 0}
     - target: {fileID: 5439096403603197393, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1404,6 +1392,38 @@ PrefabInstance:
     - target: {fileID: 5439096403603197393, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GamePause
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseGame, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096403603197394, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096404851497465, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5439096404851497465, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d4f4fcf94ab3a41bc0935d122b3d61, type: 3}
