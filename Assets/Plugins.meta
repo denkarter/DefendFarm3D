@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/StarterAssets/StarterAssets_Documentation_v1.1.pdf.meta
+guid: f3ba1649f00c3f94b8220572a09e6069
+========
 guid: 4d7f4f6065b7ef24e903d669caa0a152
 folderAsset: yes
+>>>>>>>> main:Assets/Plugins.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

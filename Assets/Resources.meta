@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/PolygonTown.meta
+guid: 9e6b7a6d68add9c41920bf1897ecb29e
+========
 guid: 3f7b6cb453c77d54791c045ac0a328ac
+>>>>>>>> main:Assets/Resources.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

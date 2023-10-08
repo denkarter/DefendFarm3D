@@ -1,6 +1,10 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/LevelWithPlayer.unity.meta
+guid: bda955fde6a049443ac19d22a3f72c1e
+========
 guid: 4d6e06159c4fb944fbcaf5263b329e52
 folderAsset: yes
+>>>>>>>> main:Assets/Prefabs/UI.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
