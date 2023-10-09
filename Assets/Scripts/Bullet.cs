@@ -17,12 +17,13 @@ public class Bullet : MonoBehaviour {
     public void Seek (Transform _target)
     {
         target = _target;
-       // layer = layerMask;
+        
        
         Rigidbody body = GetComponent<Rigidbody>();
         transform.forward = direction;
         body.useGravity = false;
         body.AddForce(direction * bulletSpeed, ForceMode.VelocityChange);
+        
     }
     void Update () {
 
@@ -48,18 +49,12 @@ public class Bullet : MonoBehaviour {
 
     void HitTarget ()
     {
-        /*
-        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(effectIns, 5f);
-
-        if (explosionRadius > 0f)
+        int calculatedDamage = Mathf.RoundToInt(damage);
+        
+        if (enemyHealth != null)
         {
-            Explode();
-        } else
-        {
-            Damage(target);
+            enemyHealth.GetDamage(calculatedDamage); 
         }
-        */
         Destroy(gameObject);
     }
 
@@ -69,7 +64,7 @@ public class Bullet : MonoBehaviour {
         {
             if(((1 << other.gameObject.layer) & layer) != 0)
             {
-                other.GetComponent<EnemyHealth>();
+                EnemyHealth enemy = other.GetComponent<EnemyHealth>();
             }
 
             Destroy(gameObject);

@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 5623289248057038282}
   m_Layer: 0
   m_Name: Character_Goblin_Male
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -973,7 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: -235041402814806809}
-  PlantTransform: {fileID: 0}
+  EnemyDestination: {fileID: 0}
   MinimalDistance: 0.4
 --- !u!1 &115104
 GameObject:
