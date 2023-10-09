@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 303d2b00a2e5498d946c8308d9d0448c, type: 3}
+  m_Name: EnemyFactory
+  m_EditorClassIdentifier: 
+  _goblin:
+    _prefab: {fileID: 1003585719088807796, guid: 2ef59bc5d753ebe4490b708befe65999, type: 3}
+    _health: 4
+    _speed: 6
+  _golem:
+    _prefab: {fileID: -2120071579581168594, guid: 10f9cee6cfdd7df43a5d805acd44763f, type: 3}
+    _health: 8
+    _speed: 2
+  _skeleton:
+    _prefab: {fileID: 4094759383992712236, guid: 659981ab97d9bb64990767ef5f931f7c, type: 3}
+    _health: 6
+    _speed: 9

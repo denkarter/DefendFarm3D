@@ -1,6 +1,30 @@
-using Health;
+using Enemy;
+using UnityEngine;
 
-public class EnemyHealth: BaseHealth
+namespace Health
 {
-   
+    public class EnemyHealth: MonoBehaviour
+    {
+        private int _maxHealth;
+        private int _currentHealth;
+
+        public int MaxHealth
+        {
+            get => _currentHealth;
+            set
+            {
+                _maxHealth = value;
+            }
+        }
+        
+        public EnemyHealth(int health)
+        {
+            MaxHealth = health;
+            _currentHealth = MaxHealth;
+        }
+
+        public void GetDamage(int _damage)
+        {
+        }
+    }
 }

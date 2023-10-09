@@ -5,14 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineTarget
-  - InventorySlot
-  - Arrow
-  - arrow
+  - DestinationForEnemies
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Minimap
+  - 
   - Water
   - UI
   - 
