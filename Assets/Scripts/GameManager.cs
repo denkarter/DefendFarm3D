@@ -16,10 +16,8 @@ namespace DefaultNamespace
         [SerializeField] private int m_decreaseWaterPerPour;
         [SerializeField] private float m_maxDistanceToRefillWater;
         [SerializeField] private float m_maxDistanceToRestorePlantHp;
-        [SerializeField] private Camera m_upperCamera;
-        
-        public Camera upperCamera => m_upperCamera;
-        
+        [SerializeField] private AudioClip m_collectPlodSound;
+
         public Transform m_playerTransform;
 
         // Если вам нужно изменить значение кол-ва монет, то пишите 
@@ -49,9 +47,15 @@ namespace DefaultNamespace
             maxDistanceToRestorePlantHp = new ReactiveProperty<float>(m_maxDistanceToRestorePlantHp);
             decreaseWaterPerPour = new ReactiveProperty<int>(m_decreaseWaterPerPour);
             
-            _enemySpawner.StartWork();        
+            if (_enemySpawner)
+                _enemySpawner.StartWork();
             
             DontDestroyOnLoad(gameObject);
+        }
+
+        public void PlayCollectCoinSound()
+        {
+            AudioSource.PlayClipAtPoint(m_collectPlodSound, m_playerTransform.position);
         }
 
         #region Leika i Voda
