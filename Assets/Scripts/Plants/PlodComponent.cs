@@ -1,28 +1,40 @@
-using System;
+
+
 using System.Collections;
 using DG.Tweening;
+using TMPro;
+using UniRx;
 using UnityEngine;
 
 namespace DefaultNamespace.Plants
 {
     public class PlodComponent: MonoBehaviour
     {
-        [SerializeField] private int m_coinsPurchase;
         [SerializeField] private CanvasGroup m_canvasGroup;
         [SerializeField] private GameObject m_canvas;
         [SerializeField] private Collider m_collider;
         [SerializeField] private MeshRenderer m_renderer;
+        [SerializeField] private TMP_Text m_costCountText;
 
+        private bool m_collected;
+
+        private void OnEnable()
+        {
+            GameManager.Instance.plodSellingCost.Subscribe(x => m_costCountText.text = x.ToString());
+        }
+        
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (!m_collected && collision.gameObject.CompareTag("Player"))
             {
+                m_canvasGroup.alpha = 1;
                 transform.DOMove(transform.position + Vector3.up, 1);
                 m_canvasGroup.DOFade(0, 1);
                 
                 GameManager.Instance.PlayCollectCoinSound();
-                GameManager.Instance.m_coins.Value += m_coinsPurchase;
+                GameManager.Instance.m_coins.Value += GameManager.Instance.plodSellingCost.Value;
 
+                m_collected = true;
                 DisableObject();
             }
         }

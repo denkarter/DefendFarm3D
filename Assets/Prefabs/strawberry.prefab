@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4143174519516132355}
   - component: {fileID: 4143174519516132354}
   - component: {fileID: 4143174519516132353}
+  - component: {fileID: 6950184812470166437}
   m_Layer: 0
   m_Name: strawberry
   m_TagString: Untagged
@@ -50,11 +51,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85932a7f2a664ae681e34bbc8c455d4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_coinsPurchase: 7
   m_canvasGroup: {fileID: 8939724017464406228}
   m_canvas: {fileID: 8939724017464406226}
   m_collider: {fileID: 4143174519516132355}
   m_renderer: {fileID: 4133571374758331301}
+  m_costCountText: {fileID: 8939724017323382599}
 --- !u!33 &4143174519516132365
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -145,7 +146,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 63fa5d87fc1b57340aa75898d7cf5fe0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -230,6 +231,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &6950184812470166437
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111580930186718207}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.006
+  m_Center: {x: 0.000096026124, y: -0.00002008816, z: -4.6566123e-10}
 --- !u!1 &8939724017323382592
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +257,7 @@ GameObject:
   - component: {fileID: 8939724017323382599}
   - component: {fileID: 8939724017323382598}
   m_Layer: 0
-  m_Name: PlusText (1)
+  m_Name: CostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,7 +523,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8939724017464406226}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

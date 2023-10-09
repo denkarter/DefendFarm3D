@@ -10,12 +10,18 @@ namespace DefaultNamespace
         [SerializeField] private EnemySpawner _enemySpawner;
         public static GameManager Instance;
 
-        [Tooltip("Стартовые значения")]
-        [SerializeField] private int m_maxWaterAmount;
-        [SerializeField] private int m_restoreHpByWaterPerHit;
-        [SerializeField] private int m_decreaseWaterPerPour;
-        [SerializeField] private float m_maxDistanceToRefillWater;
-        [SerializeField] private float m_maxDistanceToRestorePlantHp;
+        [Header("Стартовые значения")]
+        [Header("Вода")]
+        [SerializeField] private int m_maxWaterAmount = 30;
+        [SerializeField] private int m_restoreHpByWaterPerHit = 10;
+        [SerializeField] private int m_decreaseWaterPerPour = 5;
+        [SerializeField] private float m_maxDistanceToRefillWater = 3;
+        [SerializeField] private float m_maxDistanceToRestorePlantHp = 3;
+        [SerializeField] private int m_upgradingWateringCanValue = 2;
+        [Header("Продажа плодов")]
+        [SerializeField] private int m_addSellCostCount = 1;
+        [SerializeField] private int m_plodSellingCost = 7;
+        [Header("Звуки")]
         [SerializeField] private AudioClip m_collectPlodSound;
 
         public Transform m_playerTransform;
@@ -31,6 +37,9 @@ namespace DefaultNamespace
         [HideInInspector] public ReactiveProperty<float> maxDistanceToRestorePlantHp;
         [HideInInspector] public ReactiveProperty<int> restoreHpPerHit;
         [HideInInspector] public ReactiveProperty<int> decreaseWaterPerPour;
+        [HideInInspector] public ReactiveProperty<int> addSellCostCount;
+        [HideInInspector] public ReactiveProperty<int> plodSellingCost;
+        [HideInInspector] public ReactiveProperty<int> upgradingWateringCanValue;
 
         private void Awake()
         {
@@ -46,6 +55,11 @@ namespace DefaultNamespace
             maxDistanceToRefillWater = new ReactiveProperty<float>(m_maxDistanceToRefillWater);
             maxDistanceToRestorePlantHp = new ReactiveProperty<float>(m_maxDistanceToRestorePlantHp);
             decreaseWaterPerPour = new ReactiveProperty<int>(m_decreaseWaterPerPour);
+            
+            upgradingWateringCanValue = new ReactiveProperty<int>(m_upgradingWateringCanValue);
+            
+            addSellCostCount = new ReactiveProperty<int>(m_addSellCostCount);
+            plodSellingCost = new ReactiveProperty<int>(m_plodSellingCost);
             
             if (_enemySpawner)
                 _enemySpawner.StartWork();
