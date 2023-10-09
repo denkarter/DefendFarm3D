@@ -1,3 +1,4 @@
+using Enemy;
 using UniRx;
 using UnityEngine;
 
@@ -5,6 +6,7 @@ namespace DefaultNamespace
 {
     public class GameManager: MonoBehaviour
     {
+        [SerializeField] private EnemySpawner _enemySpawner;
         public static GameManager Instance;
 
         public Transform m_playerTransform;
@@ -21,6 +23,8 @@ namespace DefaultNamespace
                 Destroy(gameObject);
 
             m_coins = new ReactiveProperty<int>();
+            
+            _enemySpawner.StartWork();        
             
             DontDestroyOnLoad(gameObject);
         }

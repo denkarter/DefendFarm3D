@@ -1,16 +1,22 @@
 using System;
+using Health;
 using UnityEngine;
 
 namespace Enemy
 {
     public class Enemy: MonoBehaviour
     {
-        private float _health;
-        private float _speed;
-        
-        public void Initialize(float health, float speed)
+        private EnemyHealth _health;
+        private int _speed;
+
+        private void Awake()
         {
-            _health = health;
+            _health = GetComponent<EnemyHealth>();
+        }
+
+        public void Initialize(int health, int speed)
+        {
+            _health.MaxHealth = health;
             _speed = speed;
         }
 
