@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6215801183631599794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6215801183631599793}
+  - component: {fileID: 6215801183631599792}
+  - component: {fileID: 6215801183631599798}
+  - component: {fileID: 6215801183631599799}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6215801183631599793
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215801183631599794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6215801183631599792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215801183631599794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c044aa7d6da5418c89dee3fa07cb9c83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemySpawner: {fileID: 0}
+  m_maxWaterAmount: 30
+  m_restoreHpByWaterPerHit: 10
+  m_decreaseWaterPerPour: 5
+  m_maxDistanceToRefillWater: 3
+  m_maxDistanceToRestorePlantHp: 3
+  m_upgradingWateringCanValue: 10
+  m_addSellCostCount: 1
+  m_plodSellingCost: 7
+  m_collectPlodSound: {fileID: 8300000, guid: 63fa5d87fc1b57340aa75898d7cf5fe0, type: 3}
+  m_playerTransform: {fileID: 0}
+  m_coins:
+    value: 0
+  maxWaterAmount:
+    value: 0
+  currentWaterAmount:
+    value: 0
+  maxDistanceToRefillWater:
+    value: 0
+  maxDistanceToRestorePlantHp:
+    value: 0
+  restoreHpPerHit:
+    value: 0
+  decreaseWaterPerPour:
+    value: 0
+  addSellCostCount:
+    value: 0
+  plodSellingCost:
+    value: 0
+  upgradingWateringCanValue:
+    value: 0
+--- !u!114 &6215801183631599798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215801183631599794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d19e80e436214124b357b2fe571acf9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 100
+  m_currentHealth: 50
+  m_healthBar: {fileID: 0}
+  m_animator: {fileID: 0}
+  m_hurtSound: {fileID: 0}
+  m_deadSound: {fileID: 0}
+--- !u!114 &6215801183631599799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215801183631599794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1472a0a50e6ec4469dfc4d9ec948fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

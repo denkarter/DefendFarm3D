@@ -2893,8 +2893,8 @@ GameObject:
   - component: {fileID: 409404182324376306}
   - component: {fileID: 6188032315783758974}
   - component: {fileID: 7588021903109593102}
-  - component: {fileID: 214273272}
   - component: {fileID: 273190167132502827}
+  - component: {fileID: 3291036462248951103}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -3136,21 +3136,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &214273272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7588021903109593090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fc1d7f2c0a84dfd833ae5f19c9c045d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_endOfCan: {fileID: 999185976493139453}
-  m_player: {fileID: 7063263913785901752}
-  m_speed: 8
 --- !u!81 &273190167132502827
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3159,6 +3144,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7588021903109593090}
   m_Enabled: 1
+--- !u!136 &3291036462248951103
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7588021903109593090}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.30191296
+  m_Height: 1.8178513
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9252428, z: 0.0028508902}
 --- !u!1001 &1302910638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3228,11 +3227,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41d40f8a8094e5048a0c232131a8a29b, type: 3}
---- !u!4 &999185976493139453 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 999185977488716627, guid: 41d40f8a8094e5048a0c232131a8a29b, type: 3}
-  m_PrefabInstance: {fileID: 1302910638}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1660056331690305308 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1660056332807516594, guid: 41d40f8a8094e5048a0c232131a8a29b, type: 3}
