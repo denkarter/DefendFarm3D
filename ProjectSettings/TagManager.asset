@@ -6,6 +6,8 @@ TagManager:
   tags:
   - CinemachineTarget
   - DestinationForEnemies
+  - KillerPlants
+  - Plants
   layers:
   - Default
   - TransparentFX
@@ -19,11 +21,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - AggroEnemy
+  - Plants
+  - KillerPlants
+  - AttackZone
   - 
   - 
   - 
