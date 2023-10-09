@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: [CinemachineTarget, DestinationForEnemies, CinemachineTarget, Plant]
+  tags:
+  - CinemachineTarget
+  - DestinationForEnemies
+  - CinemachineTarget
+  - Plant
+  - arrow
+  - Enemy
   layers:
   - Default
   - TransparentFX
