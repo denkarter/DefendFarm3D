@@ -1,39 +1,37 @@
 using System;
+using Enemy;
 using Health;
 using UnityEngine;
 
-namespace Enemy
+[RequireComponent(typeof(EnemyAnimator), typeof(EnemyHealth))]
+public class EnemyDeath: MonoBehaviour
 {
-    [RequireComponent(typeof(EnemyAnimator), typeof(EnemyHealth))]
-    public class EnemyDeath: MonoBehaviour
+    public EnemyHealth Health;
+    public EnemyAnimator Animator;
+    public event Action EnemyDied;
+
+    private void Start()
     {
-        public EnemyHealth Health;
-        public EnemyAnimator Animator;
-        public event Action EnemyDied;
+        Health.HealthChanged += HealthChanged;
+    }
 
-        private void Start()
+    private void HealthChanged()
+    {
+        if (Health.CurrentHealth < 0)
         {
-            Health.HealthChanged += HealthChanged;
+            Die();
         }
+    }
 
-        private void HealthChanged()
-        {
-            if (Health.CurrentHealth < 0)
-            {
-                Die();
-            }
-        }
+    private void Die()
+    {
+        // PlayDeath
+        EnemyDied?.Invoke();
+        Animator.PlayDeath();
+    }
 
-        private void Die()
-        {
-            // PlayDeath
-            EnemyDied?.Invoke();
-            Animator.PlayDeath();
-        }
-
-        private void OnDestroy()
-        {
-            Health.HealthChanged -= HealthChanged;
-        }
+    private void OnDestroy()
+    {
+        Health.HealthChanged -= HealthChanged;
     }
 }

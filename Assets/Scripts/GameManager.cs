@@ -82,8 +82,8 @@ namespace DefaultNamespace
         public void IncreaseCurrentWaterAmount(int _value)
         {
             currentWaterAmount.Value += _value;
-            if (currentWaterAmount.Value > m_maxWaterAmount)
-                currentWaterAmount.Value = m_maxWaterAmount;
+            if (currentWaterAmount.Value > maxWaterAmount.Value)
+                currentWaterAmount.Value = maxWaterAmount.Value;
         }
         
         public void DecreaseCurrentWaterAmount(int _value)

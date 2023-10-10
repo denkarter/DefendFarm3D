@@ -8,10 +8,5 @@ namespace Plants
     {
         public int Health;
         public ActorsManager ActorsManager;
-
-        private void Awake()
-        {
-            
-        }
     }
 }
