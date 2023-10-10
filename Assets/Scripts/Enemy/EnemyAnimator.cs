@@ -18,7 +18,7 @@ namespace Enemy
             _animator.SetTrigger(Dead);
         }
 
-        public void PlayAttack1()
+        public void PlayAttack()
         {
             _animator.SetTrigger(Attack2);
         }

@@ -8,6 +8,8 @@ TagManager:
   - DestinationForEnemies
   - CinemachineTarget
   - Plant
+  - KillerPlants
+  - Plants
   - arrow
   - Enemy
   layers:
@@ -23,11 +25,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - AggroEnemy
+  - Plants
+  - KillerPlants
+  - AttackZone
   - 
   - 
   - 
