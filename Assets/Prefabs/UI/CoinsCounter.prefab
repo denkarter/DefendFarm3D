@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.95
+  m_fontSize: 40.95
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -145,6 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 492984499819359391}
   - component: {fileID: 630398432338477813}
+  - component: {fileID: 1489864801482962119}
   m_Layer: 5
   m_Name: CoinsCounter
   m_TagString: Untagged
@@ -188,6 +189,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 1
   m_AspectRatio: 3.0812159
+--- !u!114 &1489864801482962119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926723058910110035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885218ba28c54ee8820c8c92df5505c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_textCounter: {fileID: 8975230943403427663}
 --- !u!1 &9215215097602681721
 GameObject:
   m_ObjectHideFlags: 0

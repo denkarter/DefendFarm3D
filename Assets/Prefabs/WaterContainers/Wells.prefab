@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534968260539415270}
   m_LocalRotation: {x: 0, y: -0.9593879, z: 0, w: 0.28209037}
-  m_LocalPosition: {x: 10.9, y: 0.62, z: 12.2}
+  m_LocalPosition: {x: 0, y: 0.62, z: 12.2}
   m_LocalScale: {x: 0.55, y: 0.55, z: 0.55}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_amountOfWater: 10
   m_amountOfWaterText: {fileID: 5323707686744984633}
-  m_getWaterSound: {fileID: 8300000, guid: 08057233677deb3488db558459e9a28a, type: 3}
+  m_getWaterSound: {fileID: 8300000, guid: 67533530e47634d42968fdf64e46c832, type: 3}
   m_audioSource: {fileID: 5685164835651254717}
 --- !u!82 &5685164835651254717
 AudioSource:
