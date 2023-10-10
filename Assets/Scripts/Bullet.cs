@@ -18,10 +18,13 @@ public class Bullet : MonoBehaviour {
     {
         target = _target;
         
+       // layer = layerMask;
        
         Rigidbody body = GetComponent<Rigidbody>();
+        //body.useGravity = false;
+        
         transform.forward = direction;
-        body.useGravity = false;
+        
         body.AddForce(direction * bulletSpeed, ForceMode.VelocityChange);
         
     }
@@ -49,12 +52,18 @@ public class Bullet : MonoBehaviour {
 
     void HitTarget ()
     {
-        int calculatedDamage = Mathf.RoundToInt(damage);
-        
-        if (enemyHealth != null)
+        /*
+        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 5f);
+
+        if (explosionRadius > 0f)
         {
-            enemyHealth.GetDamage(calculatedDamage); 
+            Explode();
+        } else
+        {
+            Damage(target);
         }
+        */
         Destroy(gameObject);
     }
 
@@ -64,7 +73,7 @@ public class Bullet : MonoBehaviour {
         {
             if(((1 << other.gameObject.layer) & layer) != 0)
             {
-                EnemyHealth enemy = other.GetComponent<EnemyHealth>();
+                other.GetComponent<EnemyHealth>();
             }
 
             Destroy(gameObject);
