@@ -872,6 +872,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenuCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6846403915399021842, guid: bb5e797b0a758c646bcef9c56a7f6ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6868277557459097992, guid: e00e6cac1b1822044b5684c987f388d0, type: 3}
+    - target: {fileID: 6846403915399021842, guid: bb5e797b0a758c646bcef9c56a7f6ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846403915399021842, guid: bb5e797b0a758c646bcef9c56a7f6ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseGame, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7337729918222980533, guid: bb5e797b0a758c646bcef9c56a7f6ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 3

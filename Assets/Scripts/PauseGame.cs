@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -49,4 +50,10 @@ public class PauseGame : MonoBehaviour
         AudioListener.pause = false; 
     }
 
+    public void QuitGame()
+    {
+        
+            Application.Quit();
+        
+    }
 }
