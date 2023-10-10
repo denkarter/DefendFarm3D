@@ -1844,7 +1844,6 @@ GameObject:
   - component: {fileID: -6846470422595555597}
   - component: {fileID: 97999135711517679}
   - component: {fileID: 3031916166024683627}
-  - component: {fileID: 8160914041371524325}
   - component: {fileID: 3743354427194804622}
   - component: {fileID: 8078562015815162241}
   - component: {fileID: 2257103913114680569}
@@ -1985,20 +1984,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Agent: {fileID: 97999135711517679}
   MinimalDistance: 0.4
---- !u!114 &8160914041371524325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb9449eac704d81af019a00c544751d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Health: {fileID: -9154950705511847335}
-  Animator: {fileID: -6846470422595555597}
 --- !u!114 &3743354427194804622
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ namespace Enemy
     public class Enemy: MonoBehaviour
     {
         private EnemyHealth _health;
-        private EnemyDeath _enemyDeath;
+        //private EnemyDeath _enemyDeath;
         private int _speed;
         public Action EnemyCreated;
         public bool IsDead = false;
@@ -18,12 +18,12 @@ namespace Enemy
         {
             //DestinationType = DestinationType.Plants;
             _health = GetComponent<EnemyHealth>();
-            _enemyDeath = GetComponent<EnemyDeath>();
+            //_enemyDeath = GetComponent<EnemyDeath>();
         }
 
         private void Start()
         {
-            _enemyDeath.EnemyDied += EnemyDied;
+            //_enemyDeath.EnemyDied += EnemyDied;
         }
 
         private void EnemyDied()
