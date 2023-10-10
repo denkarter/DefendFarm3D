@@ -24,7 +24,7 @@ namespace Enemy
                     CurrentEnemies.RemoveAt(i);
                 }
             }
-            //Debug.Log(CurrentEnemies.Count);
+            
         }
     }
 }

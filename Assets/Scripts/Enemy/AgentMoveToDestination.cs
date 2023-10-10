@@ -13,7 +13,7 @@ namespace Enemy
         private GameObject _player;
         private int _indexOfPlantsDestination;
         private int _indexOfKillerPlantsDestination;
-        //private string _nameOfDestination;
+        
         public float MinimalDistance = 0.8f;
         private DestinationType _destinationType;
         private ActorsManager _actorsManager;
@@ -40,7 +40,7 @@ namespace Enemy
             
             
             _destinationType = DestinationType.Plants;
-            Debug.Log("_destinationType at Start: " + _destinationType);
+            //Debug.Log("_destinationType at Start: " + _destinationType);
         }
 
         private void Update()

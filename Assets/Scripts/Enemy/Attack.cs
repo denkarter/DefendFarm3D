@@ -24,7 +24,7 @@ namespace Enemy
 
         private void Update()
         {
-            Debug.Log(_currentAttackCoolDown);
+            //Debug.Log(_currentAttackCoolDown);
             if (_currentAttackCoolDown > 0)
             {
                 _currentAttackCoolDown -= Time.deltaTime;

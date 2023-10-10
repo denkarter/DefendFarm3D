@@ -34,17 +34,17 @@ namespace Enemy
             
                 if (obj.gameObject.CompareTag("Player"))
                 {
-                    Debug.Log("Player touched");
+                    //Debug.Log("Player touched");
                     Follow.ChangeDestination(DestinationType.Player);
                 }
                 if (obj.gameObject.CompareTag("Plants"))
                 {
-                    Debug.Log("Plants touched");
+                    //Debug.Log("Plants touched");
                     Follow.ChangeDestination(DestinationType.Plants);
                 }
                 if (obj.gameObject.CompareTag("KillerPlants"))
                 {
-                    Debug.Log("KillerPlants touched");
+                    //Debug.Log("KillerPlants touched");
                     Follow.ChangeDestination(DestinationType.KillerPlants);
                 }
                 //Follow.enabled = true;

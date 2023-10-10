@@ -7,12 +7,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-    [SerializeField] private float damage = 10;
+    [SerializeField] private int damage = 1;
     [SerializeField] private float bulletSpeed = 5;
     private LayerMask layer;
     private Transform target;
     private Vector3 direction;
-    private EnemyHealth enemyHealth;
+    private EnemyHealth _enemyHealth;
 
     public void Seek (Transform _target)
     {
@@ -51,23 +51,34 @@ public class Bullet : MonoBehaviour {
     {
         int calculatedDamage = Mathf.RoundToInt(damage);
         
-        if (enemyHealth != null)
+        if (_enemyHealth != null)
         {
-            enemyHealth.GetDamage(calculatedDamage); 
+            _enemyHealth.TakeDamage(calculatedDamage); 
         }
         Destroy(gameObject);
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if(!other.isTrigger)
+        Debug.Log(other.transform.gameObject.name);
+        //Debug.Log("Hit");
+        EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+        if (enemyHealth != null)
         {
-            if(((1 << other.gameObject.layer) & layer) != 0)
-            {
-                EnemyHealth enemy = other.GetComponent<EnemyHealth>();
-            }
-
-            Destroy(gameObject);
+            //Debug.Log("Hit");
+            enemyHealth.TakeDamage(damage);
         }
+        // if(!other.isTrigger)
+        // {
+        //     if(((1 << other.gameObject.layer) & layer) != 0)
+        //     {
+        //          Debug.Log(other.gameObject.name);
+        //          EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+        //         Debug.Log();
+        //         enemyHealth.TakeDamage(damage);
+        //     }
+        //
+        //     Destroy(gameObject);
+        // }
     }
 }
