@@ -11,6 +11,8 @@ namespace DefaultNamespace
         public static GameManager Instance;
 
         [Header("Стартовые значения")]
+        [Header("Строительство")]
+        [SerializeField] private int m_turretPrice = 30;
         [Header("Вода")]
         [SerializeField] private int m_maxWaterAmount = 30;
         [SerializeField] private int m_restoreHpByWaterPerHit = 10;
@@ -40,6 +42,9 @@ namespace DefaultNamespace
         [HideInInspector] public ReactiveProperty<int> addSellCostCount;
         [HideInInspector] public ReactiveProperty<int> plodSellingCost;
         [HideInInspector] public ReactiveProperty<int> upgradingWateringCanValue;
+        [HideInInspector] public ReactiveProperty<int> turretPrice;
+        
+        public ReactiveCommand showNotEnoughtText;
 
         private void Awake()
         {
@@ -60,6 +65,9 @@ namespace DefaultNamespace
             
             addSellCostCount = new ReactiveProperty<int>(m_addSellCostCount);
             plodSellingCost = new ReactiveProperty<int>(m_plodSellingCost);
+            turretPrice = new ReactiveProperty<int>(m_turretPrice);
+
+            showNotEnoughtText = new ReactiveCommand();
             
             if (_enemySpawner)
                 _enemySpawner.StartWork();

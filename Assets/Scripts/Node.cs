@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
@@ -41,7 +42,15 @@ public class Node : MonoBehaviour
         if (!buildManager.CanBuild)
             return;
 
-        BuildTurret(buildManager.GetTurretToBuild());
+        if (GameManager.Instance.m_coins.Value >= GameManager.Instance.turretPrice.Value)
+        {
+            GameManager.Instance.m_coins.Value -= GameManager.Instance.turretPrice.Value;
+            BuildTurret(buildManager.GetTurretToBuild());
+        }
+        else
+        {
+            GameManager.Instance.showNotEnoughtText.Execute();
+        }
     }
 
     void BuildTurret(GameObject turretPrefab)
