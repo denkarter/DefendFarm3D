@@ -62,10 +62,11 @@ public class Bullet : MonoBehaviour {
     {
         Debug.Log(other.transform.gameObject.name);
         //Debug.Log("Hit");
-        EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+        //EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+        EnemyHealth enemyHealth = other.GetComponentInParent<EnemyHealth>();
         if (enemyHealth != null)
         {
-            //Debug.Log("Hit");
+            Debug.Log("Hit");
             enemyHealth.TakeDamage(damage);
         }
         // if(!other.isTrigger)
